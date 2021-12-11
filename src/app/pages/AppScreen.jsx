@@ -127,8 +127,11 @@ const Root = styled('div')(({ theme }) => ({
 const loadingStyles = css({
     display: 'flex',
     alignItems: 'center',
-    marginTop: '49vh',
+    // marginTop: '49vh',
+    margin: 'auto',
     justifyContent: 'center',
+    height: '100vh',
+    overflow: 'hidden'
 })
 const errorStyles = css({
     display: 'block',
@@ -137,6 +140,11 @@ const errorStyles = css({
     padding: '10px',
     textAlign: 'center',
     backgroundColor: '#FCA7A7'
+})
+const errorBody = css({
+  backgroundColor: 'var(--white-background)',
+  height: '100vh',
+  overflow: 'hidden'
   })
 
 export default function AppScreen() {
@@ -173,16 +181,15 @@ export default function AppScreen() {
 
   if (error) {
     appJsx = (
-      <>
-      <ResponsiveAppBar navData={navData} />
-      <Typography 
-        variant='h4'
-        gutterBottom
-        component='div'
-        css={errorStyles}>
+      <Box css={errorBody} sx={{}}>
+        <Typography 
+          variant='h4'
+          gutterBottom
+          component='div'
+          css={errorStyles}>
         {error}
         </Typography>
-      </>
+      </Box>
     )
   }
 
