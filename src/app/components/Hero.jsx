@@ -70,8 +70,9 @@ export default function Hero() {
           variant='body1'
           gutterBottom
           component='div'
-          css={body}>
-          I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at Upstatement.
+            css={body}>
+            Sou desenvolvedor e designer gráfico, trabalho com web desde 2010. Recentemente decidi focar minha carreira no desenvolvimento front-end começando por aprimorar meus conhecimentos em JavaScript e React jsx
+            Este website procura representar minha recente produção nessa área. 
         </Typography>
         <Controls.Button
           variant='outlined'
