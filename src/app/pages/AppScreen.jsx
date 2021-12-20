@@ -16,7 +16,7 @@ import Box from '@mui/material/Box'
 import { jsx, css } from '@emotion/react'
 import styled from '@emotion/styled'
 
-console.log('process.env.NODE_ENV =', process.env.NODE_ENV)
+// console.log('process.env.NODE_ENV =', process.env.NODE_ENV)
 
 const theme = createTheme({
   typography: {
