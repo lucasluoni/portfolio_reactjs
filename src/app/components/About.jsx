@@ -135,7 +135,8 @@ export default function About({ aboutData }) {
                 {imageData && 
                   <picture>
                     <img src={imageData.full.source_url}
-                      srcSet={`${imageData.thumbnail.source_url} 125w, ${imageData.medium.source_url} 250w, ${imageData.full.source_url} 500w`}
+                      srcSet={`${imageData.full.source_url} 500w`}
+                      // srcSet={`${imageData.thumbnail.source_url} 125w, ${imageData.medium.source_url} 250w, ${imageData.full.source_url} 500w`}
                       alt="Flowers"
                       style={{ width: 'auto' }}
                       css={imagem}>
