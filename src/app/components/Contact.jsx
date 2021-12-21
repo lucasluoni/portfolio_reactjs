@@ -52,7 +52,7 @@ export default function Contact() {
   return (
     <>
       <CssBaseline />
-      <Container css={section} maxWidth="lg">
+      <Container css={section} maxWidth="lg" id='contato'>
         
           <Typography 
             variant='h2'

@@ -67,7 +67,7 @@ export default function Works({workData}) {
   return (
     <>
       <CssBaseline />
-      <Container css={section} maxWidth="lg">
+      <Container css={section} maxWidth="lg" id='trabalhos'>
         
           <Typography 
             variant='h2'

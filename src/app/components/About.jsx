@@ -107,7 +107,7 @@ export default function About({ aboutData }) {
   return (
     <>
       <CssBaseline />
-      <Container css={about} maxWidth="lg">
+      <Container css={about} maxWidth="lg" id='sobre_mim'>
         
         <Typography 
           variant='h2'
