@@ -81,16 +81,17 @@ export default function About({ aboutData }) {
 
   const FEATURE_IMAGE_URL = `${aboutData._links['wp:featuredmedia'][0].href}`
   
-   async function apiGetAboutImageData() {
-    const imageData = await get(FEATURE_IMAGE_URL)
-    const imageSizesArray = imageData.media_details.sizes
-    return imageSizesArray
-  }
-  
   const [imageData, setImageData] = useState('')
   const [error, setError] = useState('')
   
   useEffect(() => {
+
+    async function apiGetAboutImageData() {
+      const imageData = await get(FEATURE_IMAGE_URL)
+      const imageSizesArray = imageData.media_details.sizes
+      return imageSizesArray
+    }
+    
     // busca os dados do json e passa pros estados
     const fetchImageData = async function () {
       try {
@@ -101,7 +102,7 @@ export default function About({ aboutData }) {
       }
     }
     fetchImageData()
-  },[])
+  },[FEATURE_IMAGE_URL])
   
   return (
     <>
