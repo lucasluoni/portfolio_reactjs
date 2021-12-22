@@ -1,7 +1,9 @@
 import Button from './Button'
+import Link from './Link'
 
 const Controls = {
-  Button
+  Button,
+  Link
 }
 
 export default Controls

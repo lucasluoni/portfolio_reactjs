@@ -32,7 +32,6 @@ const subTitle = css({
 })
 const btn = css({
   borderRadius: 'var(--border-radius)',
-  padding: '1.25rem 1.75rem',
   fontSize: '14px',
   lineHeight: '1',
   color: 'var(--main-purple)',
@@ -44,8 +43,32 @@ const btn = css({
   border: '1px solid var(--main-purple)',
   marginTop: '50px',
   '& :hover': {
-    backgroundColor: 'var(--light-purple)'
+    backgroundColor: 'rgba(25, 118, 210, 0.04) !important',
+    border: '1px solid #1976d2'
+  },
+  '& a': {
+    color: 'var(--main-purple)',
+    padding: '1.25rem 1.75rem',
+    display: 'block'
+  },
+  '& a:hover': {
+    border: '0',
+    backgroundColor: '#fff'
   }
+})
+const link = css({
+  cursor: 'pointer',
+  fontFamily: 'SF Pro Text,Roboto,Arial,sans-serif',
+  transition: 'background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
+  padding: '1.25rem 1.75rem',
+  fontSize: '14px',
+  lineHeight: '1',
+  color: 'var(--main-purple)',
+  textDecoration: 'none',
+  textTransform: 'uppercase',
+  backgroundColor: 'var(--white-background)',
+  border: '1px solid var(--main-purple)',
+  marginTop: '50px'
 })
 
 export default function Contact() {
@@ -75,14 +98,18 @@ export default function Contact() {
           Although I’m not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
           </Typography>
         
-          <Box>
-          <Controls.Button
-            variant='outlined'
-            size='large'
-            color='primary'
-            text='mande sua mensagem'
-            css={btn}
-          />
+          <Box css={btn}>
+          <Controls.Link
+              // component='button'
+              // variant='outlined'
+              // color='primary'
+              text='mande sua mensagem'
+              href='mailto:contato@lucasluoni.com.br'
+              target='_blank'
+              rel='noopener noreferrer'
+              underline='none'
+              >
+            </Controls.Link>
           </Box>
 
         </Container>
