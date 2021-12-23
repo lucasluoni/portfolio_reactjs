@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from 'react'
-import { apiGetWorksData, apiGetAboutData, apiGetNavData } from './../services/ApiServices'
+import { apiGetWorksData, apiGetAboutData, apiGetNavData, apiGetContactData } from './../services/ApiServices'
 import Loading from './../components/Loading'
 import Hero from '../components/Hero'
 import Works from '../components/Works'
@@ -156,6 +156,7 @@ export default function AppScreen() {
   const [workData, setWorkData] = useState([])
   const [aboutData, setAboutData] = useState([])
   const [navData, setNavData] = useState([])
+  const [contactData, setContactData] = useState([])
 
   useEffect(() => {
   // busca os dados do json e passa pros estados
@@ -167,6 +168,8 @@ export default function AppScreen() {
       setAboutData(dataAbout)
       const dataNav = await apiGetNavData()
       setNavData(dataNav)
+      const dataContact = await apiGetContactData()
+      setContactData(dataContact)
       setLoading(false)
     } catch (error) {
       setError(error.message)
@@ -203,7 +206,7 @@ export default function AppScreen() {
           <Hero />
           <Works workData={workData} />
           <About aboutData={aboutData} />
-          <Contact />
+          <Contact contactData={contactData} />
           <Footer />
         </Box>
       </Box>

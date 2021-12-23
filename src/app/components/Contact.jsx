@@ -4,6 +4,7 @@ import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import Controls from './controls/Controls'
+import { renderedData } from './../helpers/renderedDataHelpers'
 
 /** @jsxImportSource @emotion/react */
 import { jsx, css } from '@emotion/react'
@@ -71,7 +72,8 @@ const link = css({
   marginTop: '50px'
 })
 
-export default function Contact() {
+export default function Contact({contactData}) {
+
   return (
     <>
       <CssBaseline />
@@ -82,7 +84,7 @@ export default function Contact() {
             gutterBottom
             component='div'
             css={overline}>
-            contato
+            {contactData.title.rendered}
           </Typography>
           <Typography 
             variant='h1'
@@ -95,14 +97,11 @@ export default function Contact() {
             variant='body1'
             component='div'
             css={subTitle}>
-          Although I’m not currently looking for any new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+            {renderedData(contactData.content.rendered)}
           </Typography>
         
           <Box css={btn}>
           <Controls.Link
-              // component='button'
-              // variant='outlined'
-              // color='primary'
               text='mande sua mensagem'
               href='mailto:contato@lucasluoni.com.br'
               target='_blank'

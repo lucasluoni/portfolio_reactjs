@@ -24,6 +24,6 @@ export async function apiGetNavData() {
 }
 
 export async function apiGetContactData() {
-const contactPage = await get(`${BACK_END_URL}/pages/35`)
+  const contactPage = await get(`${BACK_END_URL}/pages/35`)
   return contactPage
 }
