@@ -9,6 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
 import Link from '@mui/material/Link'
+import { ReactComponent as Logo } from './../../assets/logo-lucas-luoni.svg'
 
 /** @jsxImportSource @emotion/react */
 import { jsx, css } from '@emotion/react'
@@ -75,6 +76,11 @@ const mobileNavMenuItem = css({
 const navMenuItem = css({
   padding: '0px'
 })
+const logo = css({
+  width: '35px',
+  height: '35px',
+  // backgroundColor: 'var(--main-purple)'
+})
 
 export const ResponsiveAppBar = ({navData}) => {
 
@@ -103,8 +109,7 @@ export const ResponsiveAppBar = ({navData}) => {
             component="div"
             noWrap
             sx={{ flexGrow: 1, justifyContent: 'flex-start',  mr: 2, display: 'flex', color: '#4831D4' }}
-          >
-          LOGO
+          ><Logo css={logo} />
           </Typography>
 
           <Box sx={{ flexGrow: 2, justifyContent: 'flex-end', display: { xs: 'flex', md: 'none' } }}>

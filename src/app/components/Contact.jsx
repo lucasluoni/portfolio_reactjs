@@ -57,20 +57,6 @@ const btn = css({
     backgroundColor: '#fff'
   }
 })
-const link = css({
-  cursor: 'pointer',
-  fontFamily: 'SF Pro Text,Roboto,Arial,sans-serif',
-  transition: 'background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
-  padding: '1.25rem 1.75rem',
-  fontSize: '14px',
-  lineHeight: '1',
-  color: 'var(--main-purple)',
-  textDecoration: 'none',
-  textTransform: 'uppercase',
-  backgroundColor: 'var(--white-background)',
-  border: '1px solid var(--main-purple)',
-  marginTop: '50px'
-})
 
 export default function Contact({contactData}) {
 
