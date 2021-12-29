@@ -44,12 +44,12 @@ const item = css({
     padding: '8px',
     margin: '0',
     position: 'relative',
-    '&:hover': {
-      transform: 'translateY(-7px)',
-      visibility: 'visible',
-      opacity: '1',
-      cursor: 'pointer',
-    }  
+    // '&:hover': {
+    //   transform: 'translateY(-7px)',
+    //   visibility: 'visible',
+    //   opacity: '1',
+    //   cursor: 'pointer',
+    // }  
 })
 
 export default function Works({workData}) {
@@ -58,11 +58,13 @@ export default function Works({workData}) {
     title,
     content,
     id,
+    site_url,
+    github_url,
     tecnologia_1,
     tecnologia_2,
     tecnologia_3,
     tecnologia_4,
-  }) => ({ title, content, id, tecnologias: [tecnologia_1, tecnologia_2, tecnologia_3, tecnologia_4] }))
+  }) => ({ title, content, id, site_url, github_url, tecnologias: [tecnologia_1, tecnologia_2, tecnologia_3, tecnologia_4] }))
 
   return (
     <>

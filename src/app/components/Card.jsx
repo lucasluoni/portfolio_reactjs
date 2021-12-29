@@ -59,29 +59,32 @@ const cardPaper = css({
   borderRadius: 'var(--border-radius)',
   backgroundColor: 'var(--white-background)',
 })
-
 export default function PortfolioCard({trabalho}) {
   
   const card = (
-      <Link css={link} href='#' underline="none">
-        <CardActions css={top}>
+    <>
+      <CardActions css={top}>
+        <Link href={trabalho.github_url} target="_blank" rel="noopener" underline='none' css={link}>
           <GitHubIcon css={linkColor} />
+        </Link>
+        <Link href={trabalho.site_url} target="_blank" rel="noopener" underline='none' css={link}>
           <LaunchIcon css={linkColor} />
-        </CardActions>
-        <CardContent>
-          <Typography variant='h6' component='div' css={[linkColor, cardTitle]}>
-          {renderedData(trabalho.title.rendered)}
-          </Typography>
-          <Typography sx={{ mb: 1.5 }} css={cardBody}>
-            {renderedData(trabalho.content.rendered)}
-          </Typography>
-          <ul className={techList}>
-            {trabalho.tecnologias.map(tecnologia => (
-              <li key={tecnologia} className={listItem}>{tecnologia}</li>
-            )) }
-            </ul>
-        </CardContent>
-      </Link>
+        </Link>
+      </CardActions>
+      <CardContent>
+        <Typography variant='h6' component='div' css={[linkColor, cardTitle]}>
+        {renderedData(trabalho.title.rendered)}
+        </Typography>
+        <Typography sx={{ mb: 1.5 }} css={cardBody}>
+          {renderedData(trabalho.content.rendered)}
+        </Typography>
+        <ul className={techList}>
+          {trabalho.tecnologias.map(tecnologia => (
+            <li key={tecnologia} className={listItem}>{tecnologia}</li>
+          )) }
+        </ul>
+      </CardContent>
+    </>
   )
 
   return (
