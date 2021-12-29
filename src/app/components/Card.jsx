@@ -72,9 +72,11 @@ export default function PortfolioCard({trabalho}) {
         </Link>
       </CardActions>
       <CardContent>
-        <Typography variant='h6' component='div' css={[linkColor, cardTitle]}>
-        {renderedData(trabalho.title.rendered)}
-        </Typography>
+        <Link href={trabalho.site_url} target="_blank" rel="noopener" underline='none' css={link}>
+          <Typography variant='h6' component='div' css={[linkColor, cardTitle]}>
+            {renderedData(trabalho.title.rendered)}
+          </Typography>
+        </Link>
         <Typography sx={{ mb: 1.5 }} css={cardBody}>
           {renderedData(trabalho.content.rendered)}
         </Typography>
