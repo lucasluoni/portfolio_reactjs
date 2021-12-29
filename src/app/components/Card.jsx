@@ -59,7 +59,8 @@ const cardPaper = css({
   borderRadius: 'var(--border-radius)',
   backgroundColor: 'var(--white-background)',
 })
-export default function PortfolioCard({trabalho}) {
+export default function PortfolioCard({ trabalho }) {
+  console.log(trabalho[0])
   
   const card = (
     <>
