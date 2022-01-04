@@ -3,7 +3,7 @@ import CssBaseline from '@mui/material/CssBaseline'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
-import { renderedData } from './../helpers/renderedDataHelpers'
+// import { renderedData } from './../helpers/renderedDataHelpers'
 import Box from '@mui/material/Box'
 // apiService para regras de negócio do back end
 import { get } from './../services/httpService'
@@ -113,10 +113,10 @@ export default function About({ aboutData }) {
           variant='h2'
           gutterBottom
           component='div'
-          css={heading}>
-          {renderedData(aboutData.title.rendered)}
+          css={heading}
+          dangerouslySetInnerHTML={{__html: aboutData.title.rendered}}>
         </Typography>
-      
+
         <Grid container css={inner} spacing={2}>
          
           <Grid item xs={12} sm={12} md={7} lg={7}>
@@ -124,8 +124,7 @@ export default function About({ aboutData }) {
               variant='body1'
               component='div'
               css={content}
-            >
-              {renderedData(aboutData.content.rendered)}
+              dangerouslySetInnerHTML={{__html: aboutData.content.rendered}}>
             </Typography>
           </Grid>
           

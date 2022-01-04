@@ -60,7 +60,6 @@ const cardPaper = css({
   backgroundColor: 'var(--white-background)',
 })
 export default function PortfolioCard({ trabalho }) {
-  console.log(trabalho[0])
   
   const card = (
     <>
