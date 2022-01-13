@@ -71,8 +71,7 @@ export default function Hero() {
           gutterBottom
           component='div'
             css={body}>
-            Sou desenvolvedor e designer gráfico, trabalho com web desde 2010. Recentemente decidi focar minha carreira no desenvolvimento front-end começando por aprimorar meus conhecimentos em JavaScript e React JS.
-            Este website procura representar minha recente produção nessa área. 
+            <p>Sou desenvolvedor e designer gráfico, trabalho com web desde 2010. Recentemente decidi focar minha carreira no desenvolvimento front-end, começando por aprimorar meus conhecimentos em JavaScript, React & NodeJs. Este website procura representar minha recente produção nessa área.</p>
         </Typography>
         <Controls.Button
           variant='outlined'
