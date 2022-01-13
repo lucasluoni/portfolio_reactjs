@@ -3,6 +3,7 @@ import CssBaseline from '@mui/material/CssBaseline'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
+import Box from '@mui/material/Box'
 import Controls from './controls/Controls'
 /** @jsxImportSource @emotion/react */
 import { jsx, css } from '@emotion/react'
@@ -36,6 +37,33 @@ const body = css({
     fontSize: '17px',
     lineHeight: '1.3',
     color: 'var(--body-purple)'
+})
+const btn = css({
+  width: '241px',
+  borderRadius: 'var(--border-radius)',
+  fontSize: '14px',
+  lineHeight: '1',
+  color: 'var(--main-purple)',
+  textDecoration: 'none',
+  textTransform: 'uppercase',
+  cursor: 'pointer',
+  transition: 'all 0.25s cubic-bezier(0.645,0.045,0.355,1)',
+  backgroundColor: 'var(--white-background)',
+  border: '1px solid var(--main-purple)',
+  marginTop: '50px',
+  '& :hover': {
+    backgroundColor: 'rgba(25, 118, 210, 0.04) !important',
+    border: '1px solid #1976d2'
+  },
+  '& a': {
+    color: 'var(--main-purple)',
+    padding: '1.25rem 1.75rem',
+    display: 'block',
+  },
+  '& a:hover': {
+    border: '0',
+    backgroundColor: '#fff'
+  }
 })
 
 export default function Hero() {
@@ -73,11 +101,15 @@ export default function Hero() {
             css={body}>
             <p>Sou desenvolvedor e designer gráfico, trabalho com web desde 2010. Recentemente decidi focar minha carreira no desenvolvimento front-end, começando por aprimorar meus conhecimentos em JavaScript, React & NodeJs. Este website procura representar minha recente produção nessa área.</p>
         </Typography>
-        <Controls.Button
-          variant='outlined'
-          size='large'
-          text='Conheça meu trabalho'
-        />
+        <Box css={btn}>
+          <Controls.Link
+            text='conheça meu trabalho'
+            href='/#trabalhos'
+            rel='noopener noreferrer'
+            underline='none'            
+          >
+          </Controls.Link>
+        </Box>
         </Grid>
       </Container>
     </>

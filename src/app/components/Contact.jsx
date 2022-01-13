@@ -89,7 +89,7 @@ export default function Contact({contactData}) {
           <Box css={btn}>
           <Controls.Link
               text='mande sua mensagem'
-              href='mailto:contato@lucasluoni.com.br'
+              href='mailto:lucas@arteluz.art.br'
               target='_blank'
               rel='noopener noreferrer'
               underline='none'

@@ -147,7 +147,7 @@ const errorBody = css({
   backgroundColor: 'var(--white-background)',
   height: '100vh',
   overflow: 'hidden'
-  })
+})
 
 export default function AppScreen() {
 
