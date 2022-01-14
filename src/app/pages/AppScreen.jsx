@@ -16,8 +16,6 @@ import Box from '@mui/material/Box'
 import { jsx, css } from '@emotion/react'
 import styled from '@emotion/styled'
 
-// console.log('process.env.NODE_ENV =', process.env.NODE_ENV)
-
 const theme = createTheme({
   typography: {
     fontFamily: ['SF Pro Text', 'Roboto', 'Arial', 'sans-serif',].join(','),
@@ -35,8 +33,6 @@ const theme = createTheme({
       color: 'var(--main-purple)',
       lineHeight: '1.1',
       transform: 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)',
-      // transition: 'opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s',
-      // transitionDelay: '200ms',
       '&::before': {
         color: 'var(--main-body)',
         position: 'relative',
@@ -69,8 +65,6 @@ const theme = createTheme({
           textDecoration: 'none',
           textTransform: 'uppercase',
           cursor: 'pointer',
-          // transition: 'all 0.25s cubic-bezier(0.645,0.045,0.355,1)',
-          // transition: 'var(--transition)',
           backgroundColor: 'var(--white-background)',
           border: '1px solid var(--main-purple)',
           marginTop: '50px',
@@ -91,16 +85,6 @@ const theme = createTheme({
         }
       }
     },
-    // MuiPopover: {
-    //   styleOverrides: {
-    //     Modal: {
-    //       paddingBottom: '3.473em',
-    //       anchorPosition: {
-    //         left: '200px', top: '20px'
-    //       }
-    //     }
-    //   }
-    // }
   }
 })
 const Root = styled('div')(({ theme }) => ({
@@ -129,7 +113,6 @@ const Root = styled('div')(({ theme }) => ({
 const loadingStyles = css({
     display: 'flex',
     alignItems: 'center',
-    // marginTop: '49vh',
     margin: 'auto',
     justifyContent: 'center',
     height: '100vh',
